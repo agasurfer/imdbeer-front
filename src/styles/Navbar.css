@@ -1,0 +1,31 @@
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: rgba(82, 82, 82, 0.24) 0px 3px 8px;
+    background-color: #1A1A1A;
+    padding: 10px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+.navlinks {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    
+    
+}
+
+.navlink {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navlink:hover {
+    color: rgb(254, 223, 22);
+}

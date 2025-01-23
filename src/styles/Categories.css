@@ -1,0 +1,37 @@
+.category-hero {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.category-hero h1 {
+    padding: 30px;
+    font-size: 3rem;
+}
+
+
+.category-list {
+    list-style: none;
+    max-width: 800px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Changed to 3 equal columns */
+    gap: 10px;
+    text-align: left;
+}
+
+.category-list li {
+    margin: 0;
+    font-size: 18px;
+}
+
+.category-list li a {
+    text-decoration: none;
+    color: #ffc800;
+    font-weight: bold;
+}
+
+.category-list li a:hover {
+    text-decoration: underline;
+    color: #f0df25;
+}
