@@ -51,7 +51,7 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
   }
 
   return (
-    <div className=''>
+    <div className='style-description'>
         <h1>{style.name}</h1>
         <h2><strong>Category</strong></h2>
         <p>{style.category}</p>

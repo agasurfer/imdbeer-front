@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import '../styles/Quiz.css'
 
 const Quiz = () => {
   const [styles, setStyles] = useState([]);
@@ -48,28 +49,29 @@ const Quiz = () => {
     // Passer à la question suivante après 2 secondes
     setTimeout(() => {
       generateQuestion();
-    }, 2000);
+    }, 1000);
   };
 
   return (
-    <div>
-      <h2>Beer Style Quiz</h2>
+    <div className='quiz'>
+      <h1>Beer Style Quiz</h1>
       {question ? (
         <div>
-          <p><strong>Overall Impression:</strong> {question.overallimpression}</p>
-          <ul>
+            <h2><strong>Overall Impression</strong></h2>
+          <p>{question.overallimpression}</p>
+          <ul className='options-list'>
             {question.options.map(option => (
               <li key={option}>
-                <button onClick={() => handleAnswer(option)}>{option}</button>
+                <button className='qbtn' onClick={() => handleAnswer(option)}>{option}</button>
               </li>
             ))}
           </ul>
           {feedback && <p>{feedback}</p>}
         </div>
       ) : (
-        <div>
-          <p>Click the button below to start the quiz!</p>
-          <button onClick={generateQuestion}>Start Quiz</button>
+        <div className='start'>
+          <p >Click the button below to start the quiz!</p>
+          <button className='sbtn' onClick={generateQuestion}>Start Quiz</button>
         </div>
       )}
     </div>
