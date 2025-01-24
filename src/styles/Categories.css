@@ -6,6 +6,7 @@
 .category-hero h1 {
     padding: 30px;
     font-size: 3rem;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
 }
 
 
@@ -13,25 +14,45 @@
     list-style: none;
     max-width: 800px;
     margin: 20px auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Changed to 3 equal columns */
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    text-align: left;
+    padding: 0;
+
 }
 
 .category-list li {
+    flex: 1 1 calc(33.33% - 10px);
     margin: 0;
     font-size: 18px;
+    box-shadow: rgba(82, 82, 82, 0.24) 0px 3px 8px;
+    background-color: #1A1A1A;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
 }
 
 .category-list li a {
-    text-decoration: none;
     color: #ffc800;
     font-weight: bold;
 }
 
 .category-list li a:hover {
-    text-decoration: underline;
-    color: #f0df25;
+    color: #f7eb67;
+}
+
+@media (max-width: 768px) {
+    .category-list li {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list li {
+        flex: 1 1 100%;
+    }
 }

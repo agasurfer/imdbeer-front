@@ -1,15 +1,16 @@
-.homepage-hero {
+.category-styles-page {
     text-align: center;
     margin: 20px auto;
 }
 
-.homepage-hero h1 {
+.category-styles-page h1 {
     padding: 30px;
     font-size: 3rem;
     text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.8);
 }
 
-.styles-list {
+
+.category-styles-list {
     list-style: none;
     max-width: 800px;
     margin: 20px auto;
@@ -17,10 +18,10 @@
     flex-wrap: wrap;
     gap: 10px;
     padding: 0;
-
+    
 }
 
-.styles-list li {
+.category-styles-list li {
     flex: 1 1 calc(33.33% - 10px);
     margin: 0;
     font-size: 18px;
@@ -32,26 +33,26 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-
+  
 }
 
-.styles-list li a {
+.category-styles-list li a {
     color: #ffc800;
     font-weight: bold;
 }
 
-.styles-list li a:hover {
-    color: #f7eb67;
+.category-styles-list li a:hover {
+color: #f7eb67;
 }
 
 @media (max-width: 768px) {
-    .styles-list li {
+    .category-styles-list li {
         flex: 1 1 calc(50% - 10px);
     }
 }
 
 @media (max-width: 480px) {
-    .styles-list li {
+    .category-styles-list li {
         flex: 1 1 100%;
     }
 }
