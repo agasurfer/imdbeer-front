@@ -84,3 +84,30 @@ h2 {
     justify-content: center;
     margin-top: 30px;
 }
+
+@media (max-width: 600px) {
+    .options-list {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        
+    }
+
+    .options-list button {
+        height: 60px;
+        width: 150px;
+        font-size: 1rem;
+       
+    }
+
+    #feedback {
+        font-size: 2rem;
+        
+    }
+
+    .emojis {
+        font-size: 1.5rem;
+        
+    }
+}
