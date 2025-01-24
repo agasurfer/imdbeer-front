@@ -11,7 +11,7 @@ const Categories = () => {
         const response = await fetch('https://ilias-imdbeer.torvalds.be/styles');
         const data = await response.json();
 
-        // Extraire les catégories uniques
+        
         const uniqueCategories = [...new Set(data.map(style => style.category))];
         setCategories(uniqueCategories);
       } catch (error) {

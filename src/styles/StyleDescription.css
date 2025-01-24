@@ -66,3 +66,18 @@ input {
 .delete-btn:hover {
     color: #ff0000;
 }
+
+.date {
+    font-weight: 100;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .inputs {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 15px;
+    
+        }
+}

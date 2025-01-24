@@ -6,11 +6,11 @@ const HomePageHero = () => {
   const [styles, setStyles] = useState([]);
 
   useEffect(() => {
-    // Récupérer tous les styles depuis l'API
+    // Fetch
     fetch('https://ilias-imdbeer.torvalds.be/styles')
       .then((response) => response.json())
       .then((data) => {
-        // Trier les styles par ordre alphabétique
+        // Descending sort
         const sortedStyles = data.sort((a, b) =>
           a.name.localeCompare(b.name)
         );

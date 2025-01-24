@@ -10,18 +10,20 @@ const [comments, setComments] = useState([]);
 const [newComment, setNewComment] = useState({ username: '', comment: '' });
 
   useEffect(() => {
+    //Fetch the beers on load
     fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}`)
       .then((response) => response.json())
       .then((data) => setStyle(data))
       .catch((error) => console.error('Error fetching style details:', error));
-
+      //Fetch the comments on load
       fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments`)
   .then((response) => response.json())
   .then((data) => setComments(data))
   .catch((error) => console.error('Error fetching comments:', error));
   }, [id]);
 
-   const handleCommentSubmit = () => {
+  //Function to post comments
+  const handleCommentSubmit = () => {
     fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments`, {
       method: 'POST',
       headers: {
@@ -37,7 +39,8 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
       .catch((error) => console.error('Error submitting comment:', error));
   };
 
-   const handleCommentDelete = (commentId) => {
+  //Function to delete comments
+  const handleCommentDelete = (commentId) => {
   fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments/${commentId}`, {
     method: 'DELETE',
   })
@@ -103,7 +106,7 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
 ) : (
   comments.map((comment) => (
     <div key={comment.id} className="comment">
-      <p><strong>{comment.username}:</strong> {comment.comment}</p>
+      <p><strong>{comment.username}:</strong> {comment.comment}</p><p className='date'>{comment.createdAt}</p>
       <button className="delete-btn" onClick={() => handleCommentDelete(comment._id)}>
         <FaTrashAlt />  
       </button>
