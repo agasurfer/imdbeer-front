@@ -8,7 +8,7 @@ const Categories = () => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch('https://imdbeer-back.onrender.come/styles');
+        const response = await fetch('https://imdbeer-back.onrender.com/styles');
         const data = await response.json();
 
         
