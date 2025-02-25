@@ -37,7 +37,7 @@ const CategoryStyles = () => {
       <ul className="category-styles-list">
         {styles.map(style => (
           <li key={style._id}>
-            <Link to={`/style/${style._id}`}>
+            <Link to={`/styles/${style._id}`}>
               {style.name}
             </Link>
           </li>
