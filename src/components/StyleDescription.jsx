@@ -11,12 +11,12 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
 
   useEffect(() => {
     //Fetch the beers on load
-    fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}`)
+    fetch(`https://imdbeer-back.onrender.com/styles/${id}`)
       .then((response) => response.json())
       .then((data) => setStyle(data))
       .catch((error) => console.error('Error fetching style details:', error));
       //Fetch the comments on load
-      fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments`)
+      fetch(`https://imdbeer-back.onrender.com/styles/${id}/comments`)
   .then((response) => response.json())
   .then((data) => setComments(data))
   .catch((error) => console.error('Error fetching comments:', error));
@@ -24,7 +24,7 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
 
   //Function to post comments
   const handleCommentSubmit = () => {
-    fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments`, {
+    fetch(`https://imdbeer-back.onrender.com/styles/${id}/comments`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const [newComment, setNewComment] = useState({ username: '', comment: '' });
 
   //Function to delete comments
   const handleCommentDelete = (commentId) => {
-  fetch(`https://ilias-imdbeer.torvalds.be/styles/${id}/comments/${commentId}`, {
+  fetch(`https://imdbeer-back.onrender.com/styles/${id}/comments/${commentId}`, {
     method: 'DELETE',
   })
     .then(() => {

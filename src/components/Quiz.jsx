@@ -14,7 +14,7 @@ const Quiz = () => {
   useEffect(() => {
     const fetchStyles = async () => {
       try {
-        const response = await fetch('https://ilias-imdbeer.torvalds.be/styles');
+        const response = await fetch('https://imdbeer-back.onrender.com/styles');
         const data = await response.json();
         setStyles(data);
       } catch (error) {

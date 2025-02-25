@@ -7,7 +7,7 @@ const HomePageHero = () => {
 
   useEffect(() => {
     // Fetch
-    fetch('https://ilias-imdbeer.torvalds.be/styles')
+    fetch('https://imdbeer-back.onrender.com/styles')
       .then((response) => response.json())
       .then((data) => {
         // Descending sort
