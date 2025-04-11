@@ -1,8 +1,40 @@
-# React + Vite
+# 🍺 Beer Styles Wiki – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A user-friendly React application that consumes the [Beer Styles Wiki API](https://github.com/your-username/beer-styles-wiki-api). It allows users to browse BJCP-style beer data, search by category, and interact through comments and a fun quiz to test their knowledge.
 
-Currently, two official plugins are available:
+> I made this as a **CRUD exercise** — the adding and deleting of comments are accessible by anyone.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
+
+## 🎯 Features
+
+- 🔍 **Search & Browse Beer Styles**  
+  Filter by category and view detailed information (ABV, IBU, SRM, aroma, etc.).
+
+- 💬 **CRUD Comments**  
+  Users can add and delete comments for each style. This is public and does not require authentication (for educational/demo purposes).
+
+- 🕹️ **Includes a Fun Quiz**  
+  Test your knowledge of beer styles based on BJCP descriptions.
+
+- 🌐 **Responsive Design**  
+  Clean UI and mobile-friendly layout built with React.
+
+- ⚡ **Live API Integration**  
+  Fully connected to the Express/MongoDB API via Axios.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend**: React  
+- **Styling**: CSS 
+- **API Client**: Axios  
+- **Routing**: React Router DOM  
+- **State Management**: useState, useEffect  
+- **API**: [Beer Styles Wiki API](https://github.com/your-username/beer-styles-wiki-api)
+
+---
+
+
+
